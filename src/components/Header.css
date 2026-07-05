@@ -1,0 +1,21 @@
+.header {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f1f5f9;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 48px;
+  color: #0f172a;
+}
+
+.header p {
+  font-size: 20px;
+  color: #475569;
+  margin-top: 10px;
+}

@@ -1,0 +1,42 @@
+.profile-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* 👇 این همان حلقه دور عکس است */
+  border: 3px solid #4f46e5;
+
+  display: block;
+  margin: 0 auto;
+}
+
+.profile-container h2 {
+  color: #2563eb; /* لاجوردی */
+  margin-top: 10px;
+}
+
+.profile-container h4 {
+  color: #555;
+  margin: 5px 0;
+}
+
+.profile-container p {
+  color: #666;
+  font-size: 14px;
+}
+
+.profile-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  border: 3px solid #2563eb;
+}

@@ -1,0 +1,52 @@
+.about {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.about h2 {
+  font-size: 36px;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.about-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.about-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-container li {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.about-container button {
+  margin-top: 10px;
+  padding: 6px 10px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.about-container h2 {
+  color: #2563eb !important;
+  font-size: 28px;
+  font-weight: bold;
+}
