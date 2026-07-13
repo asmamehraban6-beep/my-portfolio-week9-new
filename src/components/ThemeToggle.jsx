@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
+import "./ThemeToggle.css";
 
 
 function ThemeToggle() {
 
-
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") || "light"
+    localStorage.getItem("theme") || "dark"
   );
-
 
 
   useEffect(() => {
@@ -23,36 +22,30 @@ function ThemeToggle() {
 
 
 
-
   const changeTheme = () => {
 
     setTheme(
-      theme === "light"
-      ? "dark"
-      : "light"
+      theme === "dark"
+      ? "light"
+      : "dark"
     );
 
   };
 
 
-
   return (
 
-    <section>
+    <button
+      className="theme-toggle"
+      onClick={changeTheme}
+    >
 
-      <h2>
-        Theme Settings
-      </h2>
+      {theme === "dark"
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode"
+      }
 
-
-      <button onClick={changeTheme}>
-
-        Change to {theme === "light" ? "Dark" : "Light"} Mode
-
-      </button>
-
-
-    </section>
+    </button>
 
   );
 

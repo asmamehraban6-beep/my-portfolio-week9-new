@@ -9,26 +9,32 @@
 
   text-align: center;
 
-  background: #111111;
+  background: var(--card);
+
+  color: var(--text);
 
   border-radius: 20px;
 
   border: 1px solid rgba(0,191,166,0.3);
 
-  box-shadow: 0 15px 35px rgba(0,191,166,0.12);
+  box-shadow: var(--shadow);
+
+  transition: 0.3s;
 
 }
 
 
+
 .about h2 {
 
-  color: #00bfa6;
+  color: var(--primary);
 
   font-size: 38px;
 
   margin-bottom: 25px;
 
 }
+
 
 
 .about-icon {
@@ -42,6 +48,7 @@
 }
 
 
+
 .about-icon:hover {
 
   transform: scale(1.1);
@@ -49,9 +56,10 @@
 }
 
 
+
 .about h3 {
 
-  color: white;
+  color: var(--primary);
 
   font-size: 26px;
 
@@ -60,9 +68,10 @@
 }
 
 
+
 .about p {
 
-  color: #ffffff;
+  color: var(--text);
 
   max-width: 700px;
 
@@ -76,7 +85,35 @@
 
 
 
-/* Responsive */
+/* Light Mode */
+
+body.light .about {
+
+  background: white;
+
+  color: #111;
+
+}
+
+
+
+body.light .about p {
+
+  color: #333;
+
+}
+
+
+
+body.light .about h3 {
+
+  color: #008f7a;
+
+}
+
+
+
+/* Mobile */
 
 @media(max-width:768px){
 

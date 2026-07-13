@@ -45,3 +45,24 @@
   }
 
 }
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+
+.project-actions button {
+  min-width: 120px;
+}
+
+
+.project-actions a {
+  width: 100%;
+}
+
+
+.project-actions a button {
+  width: 100%;
+}

@@ -1,21 +1,103 @@
 .header {
-  height: 80vh;
+
+  min-height: 80vh;
+
   display: flex;
-  flex-direction: column;
+
   justify-content: center;
+
   align-items: center;
+
   text-align: center;
-  background-color: #f1f5f9;
-  padding: 20px;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  padding: 40px 20px;
+
 }
 
-.header h1 {
-  font-size: 48px;
-  color: #0f172a;
+
+.hero-content {
+
+  max-width: 800px;
+
 }
 
-.header p {
+
+.hero-content h1 {
+
+  font-size: 55px;
+
+  color: white;
+
+}
+
+
+.hero-content h1 span {
+
+  color: var(--primary);
+
+}
+
+
+.hero-content p {
+
   font-size: 20px;
-  color: #475569;
-  margin-top: 10px;
+
+  color: var(--muted);
+
+  margin: 25px 0;
+
+}
+
+
+.hero-content button {
+
+  background: var(--primary);
+
+  color: black;
+
+  padding: 12px 30px;
+
+  border-radius: 25px;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+}
+
+
+.hero-content button:hover {
+
+  background: var(--secondary);
+
+}
+
+
+
+/* Light Mode */
+
+body.light .header {
+
+  background: #ffffff;
+
+}
+
+
+body.light .hero-content h1 {
+
+  color: #111;
+
+}
+
+
+body.light .hero-content p {
+
+  color: #333;
+
 }

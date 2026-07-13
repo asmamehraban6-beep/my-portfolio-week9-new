@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { FavoriteContext } from "../context/FavoriteContext";
+import TechBadge from "../components/TechBadge";
 import "./Projects.css";
 
 
 function Projects() {
 
-
   const [filter, setFilter] = useState("All");
 
   const [selectedProject, setSelectedProject] = useState(null);
 
+  const { favorites, toggleFavorite } = useContext(FavoriteContext);
 
 
   const projects = [
@@ -18,8 +20,10 @@ function Projects() {
       title: "Portfolio Website",
       image: "🌐",
       description: "A personal portfolio built with React.",
-      technology: "React",
-      featured: true,
+      technology: ["React", "CSS"],
+      status: "Featured",
+      progress: 90,
+      github: "https://github.com/",
       details: "A responsive developer portfolio with modern UI design."
     },
 
@@ -29,9 +33,11 @@ function Projects() {
       title: "Todo App",
       image: "✅",
       description: "A task management application.",
-      technology: "JavaScript",
-      featured: false,
-      details: "A simple application for managing daily tasks."
+      technology: ["JavaScript"],
+      status: "In Progress",
+      progress: 70,
+      github: "https://github.com/",
+      details: "An application for managing daily tasks."
     },
 
 
@@ -40,9 +46,11 @@ function Projects() {
       title: "Landing Page",
       image: "🎨",
       description: "A responsive website design.",
-      technology: "CSS",
-      featured: false,
-      details: "A clean and responsive landing page design."
+      technology: ["CSS"],
+      status: "Completed",
+      progress: 100,
+      github: "https://github.com/",
+      details: "A clean responsive landing page."
     }
 
   ];
@@ -52,46 +60,36 @@ function Projects() {
   const filteredProjects =
     filter === "All"
       ? projects
-      : projects.filter(
-          (project) =>
-            project.technology === filter
+      : projects.filter((project) =>
+          project.technology.includes(filter)
         );
 
 
 
   return (
 
-    <section id="projects" className="projects">
+    <section className="projects">
 
-
-      <h2>
-        My Projects
-      </h2>
-
+      <h2>My Projects</h2>
 
 
       <div className="filter-buttons">
-
 
         <button onClick={() => setFilter("All")}>
           All
         </button>
 
-
         <button onClick={() => setFilter("React")}>
           React
         </button>
-
 
         <button onClick={() => setFilter("JavaScript")}>
           JavaScript
         </button>
 
-
         <button onClick={() => setFilter("CSS")}>
           CSS
         </button>
-
 
       </div>
 
@@ -100,96 +98,126 @@ function Projects() {
       <div className="projects-grid">
 
 
-        {
-          filteredProjects.map((project) => (
+        {filteredProjects.map((project)=>(
 
-            <div 
-              className="project-card" 
-              key={project.id}
-            >
+          <div className="project-card" key={project.id}>
 
 
-              <h3>
-                {project.image} {project.title}
-              </h3>
+            <h3>
+              {project.image} {project.title}
+            </h3>
 
 
-
-              {
-                project.featured && (
-
-                  <span className="badge">
-                    ⭐ Featured Project
-                  </span>
-
-                )
-              }
+            <span className="badge">
+              {project.status}
+            </span>
 
 
-
-              <p>
-                {project.description}
-              </p>
-
+            <p>
+              {project.description}
+            </p>
 
 
-              <p className="technology">
-                🛠 {project.technology}
-              </p>
+            <div>
 
+              {project.technology.map((tech)=>(
 
+                <TechBadge
+                  key={tech}
+                  tech={tech}
+                />
 
-              <button
-                onClick={() =>
-                  setSelectedProject(project)
-                }
-              >
-                View Details
-              </button>
-
-
+              ))}
 
             </div>
 
-          ))
-        }
+
+            <p>
+              Progress: {project.progress}%
+            </p>
+
+
+            <div className="progress-bar">
+
+              <div
+                className="progress-fill"
+                style={{
+                  width:`${project.progress}%`
+                }}
+              >
+
+              </div>
+
+            </div>
+
+
+
+        <div className="project-actions">
+
+  <button
+    onClick={() => toggleFavorite(project.id)}
+  >
+    {
+      favorites.includes(project.id)
+      ? "⭐ Favorited"
+      : "☆ Add Favorite"
+    }
+  </button>
+
+
+  <button
+    onClick={() => setSelectedProject(project)}
+  >
+    More Info
+  </button>
+
+
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noreferrer"
+  >
+    <button>
+      View Code
+    </button>
+  </a>
+
+</div>
+
+
+          </div>
+
+        ))}
 
 
       </div>
 
 
 
+      {selectedProject && (
 
-      {
-        selectedProject && (
+        <div className="details-box">
 
-         <div className="details-box">
-
-  <h3>
-    {selectedProject.image} {selectedProject.title}
-  </h3>
+          <h3>
+            {selectedProject.image} {selectedProject.title}
+          </h3>
 
 
-  <p>
-    {selectedProject.description}
-  </p>
+          <p>
+            {selectedProject.details}
+          </p>
 
 
-  <p>
-    This project was built using <strong>{selectedProject.technology}</strong>.
-  </p>
+          <button
+            onClick={() => setSelectedProject(null)}
+          >
+            Close
+          </button>
 
 
-  <p>
-    {selectedProject.details}
-  </p>
+        </div>
 
-
-</div>
-
-        )
-      }
-
+      )}
 
 
     </section>

@@ -1,53 +1,46 @@
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import ContactForm from "./components/ContactForm";
-import FeedbackWall from "./components/FeedbackWall";
 import ThemeToggle from "./components/ThemeToggle";
-import Skills from "./components/Skills";
-import ProjectUpdates from "./components/ProjectUpdates";
-import LivePreview from "./components/LivePreview";
-import TypingAnimation from "./components/TypingAnimation";
 
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+import ProjectDetails from "./pages/ProjectDetails";
+import Skills from "./components/Skills";
 import "./App.css";
+
 
 function App() {
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-
   return (
 
-    <div className="app" id="home">
+    <div className="app">
 
       <Navbar />
 
-      <TypingAnimation />
+ <Routes>
 
-      <About />
+  <Route path="/" element={<Home />} />
 
-      <Skills />
+  <Route path="/about" element={<About />} />
 
-      <Projects />
+  <Route path="/skills" element={<Skills />} />
 
-      <ProjectUpdates />
+  <Route path="/projects" element={<Projects />} />
 
-      <FeedbackWall />
+  <Route 
+    path="/projects/:id" 
+    element={<ProjectDetails />} 
+  />
 
-      <ContactForm
-        formData={formData}
-        setFormData={setFormData}
-      />
+  <Route path="/contact" element={<Contact />} />
 
-      <LivePreview
-        formData={formData}
-      />
+  <Route path="*" element={<NotFound />} />
 
+</Routes>
 
       <ThemeToggle />
 
@@ -56,5 +49,6 @@ function App() {
   );
 
 }
+
 
 export default App;
