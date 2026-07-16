@@ -19,12 +19,6 @@ function Home() {
       <TypingAnimation />
 
 
-
-
-
-      <Skills />
-
-
       <Projects />
 
 <Contact />

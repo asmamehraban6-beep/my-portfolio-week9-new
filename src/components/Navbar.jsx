@@ -48,6 +48,16 @@ function Navbar() {
         </li>
 
 
+<li>
+  <NavLink
+    to="/skills"
+    className={({ isActive }) =>
+      isActive ? "active" : ""
+    }
+  >
+    Skills
+  </NavLink>
+</li>
 
 
         <li>

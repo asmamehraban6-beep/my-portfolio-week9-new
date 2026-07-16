@@ -4,12 +4,14 @@ import Navbar from "./components/Navbar";
 import ThemeToggle from "./components/ThemeToggle";
 
 import Home from "./pages/Home";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import ProjectDetails from "./pages/ProjectDetails";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+
 import Footer from "./components/Footer";
-import About from "./pages/About";
 
 import "./App.css";
 
@@ -31,16 +33,19 @@ function App() {
           path="/"
           element={<Home />}
         />
-       
-        <Route
-  path="/"
-  element={<Home />}
-/>
 
-<Route
-  path="/about"
-  element={<About />}
-/>
+
+        <Route
+          path="/about"
+          element={<About />}
+        />
+
+
+        <Route
+          path="/skills"
+          element={<Skills />}
+        />
+
 
         <Route
           path="/projects"
@@ -68,7 +73,9 @@ function App() {
 
       </Routes>
 
-      <Footer /> 
+
+      <Footer />
+
 
       <ThemeToggle />
 
