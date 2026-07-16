@@ -1,7 +1,6 @@
 import Header from "../components/Header";
 import TypingAnimation from "../components/TypingAnimation";
 import Projects from "./Projects";
-import Contact from "./Contact";
 
 
 function Home() {
@@ -16,7 +15,7 @@ function Home() {
 
       <Projects />
 
-      <Contact />
+      
 
     </>
 
