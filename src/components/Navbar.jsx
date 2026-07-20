@@ -10,7 +10,7 @@ function Navbar() {
 
 
       <h2 className="logo">
-        AM
+        Asma Mehraban
       </h2>
 
 
