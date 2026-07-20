@@ -61,6 +61,11 @@ function Projects() {
           CSS
         </button>
 
+        <button
+          onClick={() => setFilter("HTML")}
+        >
+          HTML
+        </button>
 
       </div>
 

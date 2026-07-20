@@ -8,104 +8,62 @@ const projects = [
     image: "🌐",
 
     description:
-      "A modern personal portfolio website built with React to showcase my skills, projects, and experience.",
+      "A modern personal portfolio website built with React to showcase my skills, projects, and frontend development journey.",
 
     technology: [
       "React",
       "JavaScript",
+      "HTML",
       "CSS"
     ],
 
     status: "Featured",
 
-    progress: 90,
+    progress: 100,
 
     github:
-      "https://github.com/asmamehraban6-beep/Asma-Mehraban-.git",
+      "https://github.com/asmamehraban6-beep/my-portfolio-week-9",
 
     liveDemo:
-      "https://asma-mehraban-portfolio.netlify.app/",
+      "https://my-portfolio-week-9.netlify.app/",
 
     problem:
-      "I needed a professional online platform to present my skills, projects, and developer journey.",
+      "I needed a professional platform to present my skills, projects, and experience as a web developer.",
 
     solution:
-      "I built a responsive React portfolio using reusable components, React Router, Context API, theme switching, and interactive features.",
+      "I built a responsive React portfolio website using reusable components, project filtering, theme switching, Context API, and interactive features.",
 
     outcome:
-      "Created a professional and responsive portfolio website that showcases my frontend development skills.",
+      "Created a professional portfolio website that demonstrates my frontend development skills and projects.",
 
     details:
-      "This project includes reusable React components, React Router navigation, Context API, dark/light theme switching, responsive design, contact form validation, localStorage, project filtering, favorite projects, and interactive UI features.",
+      "This project includes React components, responsive design, theme toggle, contact form, project filtering, favorites system, and modern UI features.",
 
     features: [
       "Responsive Design",
       "React Components",
       "Theme Toggle",
-      "Contact Form",
       "Project Filtering",
+      "Contact Form",
       "Favorite System"
     ]
   },
 
 
+
   {
     id: "2",
 
-    title: "Todo Application",
+    title: "PollyGlot AI",
 
-    image: "✅",
+    image: "🤖",
 
     description:
-      "A productivity application for managing daily tasks efficiently.",
+      "An AI-powered language learning and translation application built with React.",
 
     technology: [
+      "React",
       "JavaScript",
-      "CSS"
-    ],
-
-    status: "In Progress",
-
-    progress: 70,
-
-    github:
-      "https://github.com/",
-
-    liveDemo:
-      "",
-
-    problem:
-      "Users need a simple way to organize and track their daily tasks.",
-
-    solution:
-      "I designed a task management application with interactive features and a clean user interface.",
-
-    outcome:
-      "Created a simple productivity tool that helps users manage tasks more efficiently.",
-
-    details:
-      "A task management application with interactive features, clean UI, and user-friendly experience.",
-
-    features: [
-      "Add Tasks",
-      "Manage Tasks",
-      "Responsive Layout",
-      "Simple Interface"
-    ]
-  },
-
-
-  {
-    id: "3",
-
-    title: "Responsive Landing Page",
-
-    image: "🎨",
-
-    description:
-      "A clean and responsive landing page created with modern web design principles.",
-
-    technology: [
       "HTML",
       "CSS"
     ],
@@ -115,75 +73,129 @@ const projects = [
     progress: 100,
 
     github:
-      "https://github.com/",
+      "https://github.com/asmamehraban6-beep/PollyGlot.AI-Week-10.git",
 
     liveDemo:
       "",
 
     problem:
-      "A website needs a clear layout and attractive design to provide a good user experience.",
+      "Language learners need simple and interactive tools to practice and understand different languages.",
 
     solution:
-      "I created a responsive landing page focusing on typography, spacing, colors, and modern design principles.",
+      "I created an interactive AI-based language application with a clean interface and user-friendly design.",
 
     outcome:
-      "Built a clean landing page that works across different screen sizes.",
+      "Developed a responsive AI language application that improves my React and frontend development skills.",
 
     details:
-      "A responsive landing page focusing on layout, typography, colors, and user experience.",
+      "PollyGlot AI includes React components, responsive layout, language features, modern styling, and interactive user experience.",
 
     features: [
+      "React Application",
+      "Language Learning",
       "Responsive Design",
-      "Modern Layout",
-      "Clean UI"
+      "Interactive UI",
+      "Modern CSS"
     ]
   },
+
+
+
+  {
+    id: "3",
+
+    title: "Freelance Invoice App",
+
+    image: "💼",
+
+    description:
+      "A simple invoice management application designed for freelancers.",
+
+    technology: [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+
+    status: "Completed",
+
+    progress: 100,
+
+    github:
+      "https://github.com/asmamehraban6-beep/freelance-invoice-app.git",
+
+    liveDemo:
+      "",
+
+    problem:
+      "Freelancers need an easy way to organize and manage invoice information.",
+
+    solution:
+      "I built a simple invoice application with a clean interface using HTML, CSS, and JavaScript.",
+
+    outcome:
+      "Created a functional invoice management project that strengthened my JavaScript and UI development skills.",
+
+    details:
+      "This project focuses on creating a practical freelance tool with structured layout, styling, and interactive functionality.",
+
+    features: [
+      "Invoice Management",
+      "Clean Interface",
+      "JavaScript Functionality",
+      "Responsive Layout"
+    ]
+  },
+
 
 
   {
     id: "4",
 
-    title: "AI Marketing Calendar",
+    title: "AI Post Planner",
 
-    image: "🤖",
+    image: "🚀",
 
     description:
-      "An AI-powered marketing planner for organizing content and campaigns.",
+      "An AI-powered social media content planning application currently under development.",
 
     technology: [
       "React",
-      "AI",
-      "CSS"
+      "JavaScript",
+      "CSS",
+      "AI"
     ],
 
-    status: "Planned",
+    status: "In Progress",
 
-    progress: 30,
+    progress: 20,
 
     github:
-      "https://github.com/",
+      "",
 
     liveDemo:
       "",
 
     problem:
-      "Content creators need better tools to organize ideas and marketing campaigns.",
+      "Content creators and marketers need better tools to organize ideas and plan social media content.",
 
     solution:
-      "A future AI-based planner that helps users generate content ideas and manage campaigns.",
+      "I am planning an AI-powered application that helps users generate content ideas and organize marketing schedules.",
 
     outcome:
-      "A concept project exploring AI assistance in digital marketing workflows.",
+      "This project is currently in the planning and development stage as part of my capstone project.",
 
     details:
-      "A future project concept that helps users create and organize marketing content using AI assistance.",
+      "AI Post Planner is a future application designed to combine AI assistance with content planning and marketing organization.",
 
     features: [
-      "AI Content Ideas",
-      "Calendar Planning",
-      "Campaign Organization"
+      "AI Content Suggestions",
+      "Marketing Calendar",
+      "Content Planning",
+      "Future Development"
     ]
   }
+
 
 ];
 
